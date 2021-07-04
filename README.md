@@ -1,1 +1,1 @@
-# Coursera_Data_Structures_and_Algorithms
+Specialization "Data Structures and Algorithms" on Coursera
