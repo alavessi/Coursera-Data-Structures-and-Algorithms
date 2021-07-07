@@ -16,6 +16,7 @@ int fibonacci_sum_naive(long long n)
     }
     return S[n%60]%10;
 }
+
 long long get_fibonacci_partial_sum_naive(long long from, long long to)
 {
     int S1 = fibonacci_sum_naive(to);
@@ -25,9 +26,12 @@ long long get_fibonacci_partial_sum_naive(long long from, long long to)
         S1 = S1-S2;
     }
     if (S1<0)
+    {
         S1 = S1 + 10;
+    }
     return S1;
 }
+
 int main()
 {
     long long from, to;
