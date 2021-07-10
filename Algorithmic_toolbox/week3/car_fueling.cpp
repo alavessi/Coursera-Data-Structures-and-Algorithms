@@ -16,7 +16,8 @@ int compute_min_refills(int dist, int tank, int n, std::vector<int> &stops)
     }
     return numRefills;
 }
-main()
+
+int main()
 {
     int d,m,n;
     std::cin >> d >> m >> n;
