@@ -47,4 +47,5 @@ int main()
     double optimal_value = get_optimal_value(n, capacity, items);
     std::cout.precision(10);
     std::cout << optimal_value;
+    return 0;
 }
