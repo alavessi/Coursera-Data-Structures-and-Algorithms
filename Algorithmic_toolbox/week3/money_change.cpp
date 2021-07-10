@@ -15,4 +15,5 @@ int main()
     int m;
     std::cin >> m;
     std::cout << get_change(m);
+    return 0;
 }
