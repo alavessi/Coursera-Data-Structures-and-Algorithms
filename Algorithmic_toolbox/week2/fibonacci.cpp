@@ -16,29 +16,32 @@
 
 int fibonacci_naive(int n)
 {
-    if (n<=1)
-        return n;
-    return fibonacci_naive(n-1) + fibonacci_naive(n-2);
+    if (n <= 1) return n;
+    return fibonacci_naive(n - 1) + fibonacci_naive(n - 2);
 }
 
 long fibonacci_fast(int n)
 {
-    long Fib[100];
-    Fib[0]=0;
-    Fib[1]=1;
-    for (int i=2; i<100; i++)
-        Fib[i]=Fib[i-1]+Fib[i-2];
+    long Fib[100] = {0, 1};
+    for (int i = 2 ; i < 100; i++)
+    {
+        Fib[i] = Fib[i - 1] + Fib[i - 2];
+    }
     return Fib[n];
 }
 
-void test_solution() {
+void test_solution()
+{
     assert(fibonacci_fast(3) == 2);
     assert(fibonacci_fast(10) == 55);
     for (int n = 0; n < 20; ++n)
+    {
         assert(fibonacci_fast(n) == fibonacci_naive(n));
+    }
 }
 
-int main() {
+int main()
+{
     int n;
     std::cin >> n;
     //std::cout << fibonacci_naive(n) << '\n';
