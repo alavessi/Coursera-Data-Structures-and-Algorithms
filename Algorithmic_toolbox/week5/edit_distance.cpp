@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 int edit_distance(const std::string& s1, const std::string& s2)
 {
-    int D[s1.size() + 1][s2.size() + 1];
+    std::vector<std::vector<int>> D(s1.size() + 1, std::vector<int>(s2.size() + 1));
     for (size_t i = 0; i <= s1.size(); i++)
     {
         D[i][0] = i;
@@ -30,3 +31,4 @@ int main()
     std::cout << edit_distance(str1, str2);
     return 0;
 }
+
