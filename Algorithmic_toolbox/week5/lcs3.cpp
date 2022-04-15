@@ -3,7 +3,8 @@
 
 int lcs3(const std::vector<int>& a, const std::vector<int>& b, const std::vector<int>& c)
 {
-    static int D[200][200][200];
+    const size_t MAXSIZE = 100;
+    static int D[MAXSIZE + 1][MAXSIZE + 1][MAXSIZE + 1];
     for (size_t i = 0; i <= a.size(); i++)
     {
         D[i][0][0] = 0;
